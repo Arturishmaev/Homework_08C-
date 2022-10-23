@@ -64,7 +64,7 @@ for (int i = 0; i < array.GetLength(0); i++)
 }
 Console.WriteLine();
 Console.WriteLine("Массив отсортированый по убыванию :");
-PrintArray(array);*/
+PrintArray(array);
 
 
 // Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, 
@@ -133,7 +133,7 @@ Console.WriteLine();
 Console.WriteLine("Массив случайных чисел: ");
 PrintArray(array);
 System.Console.WriteLine("");
-MinSumElements(array);
+MinSumElements(array);*/
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
@@ -141,3 +141,43 @@ MinSumElements(array);
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + "  ");
+        }
+        Console.Write("]");
+        Console.WriteLine("");
+    }
+}
+
+int[,] array = new int[4, 4];
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    array[0, 0] = 1;
+    array[0, 1] = 2;
+    array[0, 2] = 3;
+    array[0, 3] = 4;
+    array[1, 3] = 5;
+    array[2, 3] = 6;
+    array[3, 3] = 7;
+    array[3, 2] = 8;
+    array[3, 1] = 9;
+    array[3, 0] = 10;
+    array[2, 0] = 11;
+    array[1, 0] = 12;
+    array[1, 1] = 13;
+    array[1, 2] = 14;
+    array[2, 2] = 15;
+    array[2, 1] = 16;
+}
+
+
+PrintArray(array);
